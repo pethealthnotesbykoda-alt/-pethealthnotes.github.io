@@ -1,0 +1,338 @@
+/* ==========================================================================
+   PETHEALTHNOTES — COMPONENT LAYER (Additive, doesn't override dark theme)
+   New classes for Python-generated articles and category pages.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* Light-mode layout vars — only apply inside .light-layout wrapper */
+.light-layout {
+  --ll-bg:        #ffffff;
+  --ll-surface:   #f8fafc;
+  --ll-primary:   #0f172a;
+  --ll-secondary: #334155;
+  --ll-muted:     #64748b;
+  --ll-accent:    #0284c7;
+  --ll-accent-bg: #f0fdfa;
+  --ll-green:     #10b981;
+  --ll-red:       #dc2626;
+  --ll-red-bg:    #fef2f2;
+  --ll-red-border:#fca5a5;
+  background: var(--ll-bg);
+  color: var(--ll-secondary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* ── 4-Tab Premium Navigation ───────────────────────────────────────────── */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .header-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.site-header .logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0f172a;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.site-header .logo-accent { color: #0284c7; }
+.site-header .main-nav {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.nav-link {
+  text-decoration: none;
+  color: #475569;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.45rem 0.75rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.nav-link:hover, .nav-link.active {
+  color: #0284c7;
+  background: #f0fdfa;
+}
+.nav-link.emergency-tab {
+  background: #fef2f2;
+  color: #dc2626 !important;
+  border: 1px solid #fca5a5;
+  font-weight: 600;
+}
+.nav-link.emergency-tab:hover {
+  background: #fee2e2;
+  box-shadow: 0 4px 12px rgba(220,38,38,0.1);
+}
+
+/* ── Article Post Layout ────────────────────────────────────────────────── */
+.post-layout-container {
+  max-width: 740px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+.post-category-tag {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: #0284c7;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+h1.post-title {
+  font-size: 2.4rem;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+}
+
+/* ── E-E-A-T Trust Shield ───────────────────────────────────────────────── */
+.trust-shield {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #0284c7;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin: 2rem 0;
+}
+.trust-shield .shield-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f172a;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+.shield-header .verified-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  margin-left: auto;
+  box-shadow: 0 0 8px #10b981;
+}
+.trust-shield .shield-body p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #334155;
+  margin: 0 0 0.5rem 0;
+}
+.trust-shield .vet-validation {
+  background: #f0fdf4;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  color: #166534 !important;
+}
+.trust-shield .disclaimer {
+  font-size: 0.8rem !important;
+  color: #64748b;
+  margin-top: 0.75rem !important;
+  font-style: italic;
+}
+
+/* ── Markdown Body (serif for readability) ──────────────────────────────── */
+.markdown-content {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #1e293b;
+}
+.markdown-content h2 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-top: 2.5rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+.markdown-content h3 {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 1.2rem;
+  color: #0284c7;
+  margin-top: 1.75rem;
+}
+.markdown-content p { margin-bottom: 1.4rem; }
+.markdown-content ul, .markdown-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.4rem;
+}
+.markdown-content li { margin-bottom: 0.5rem; }
+.markdown-content a { color: #0284c7; }
+.markdown-content strong { color: #0f172a; }
+
+/* ── Category Landing Page Cards ────────────────────────────────────────── */
+.category-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.category-hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 2.5rem;
+}
+.category-hero h1 { font-size: 2.2rem; color: #0f172a; margin-bottom: 0.75rem; }
+.category-hero p  { font-size: 1.1rem; color: #475569; max-width: 600px; margin: 0 auto; }
+
+.article-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.article-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+}
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.article-card .card-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0284c7;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.article-card h3 { font-size: 1rem; color: #0f172a; margin: 0 0 0.5rem 0; font-weight: 600; }
+.article-card p  { font-size: 0.875rem; color: #64748b; margin: 0; line-height: 1.5; }
+
+/* ── Mobile ─────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .site-header .header-container { flex-direction: column; gap: 0.75rem; padding: 0.75rem 1rem; }
+  .site-header .main-nav { gap: 0.25rem; flex-wrap: wrap; justify-content: center; }
+  .nav-link { font-size: 0.8rem; padding: 0.35rem 0.55rem; }
+  h1.post-title { font-size: 1.85rem; }
+  .markdown-content { font-size: 1rem; }
+  .post-layout-container { margin: 1.5rem auto; }
+}
+
+/* ==========================================================================
+   KIT (CONVERTKIT) INTEGRATION STYLES
+   ========================================================================== */
+.kit-embedded-form {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.kit-embedded-form label {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.kit-embedded-form input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kit-embedded-form input[type="email"]:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+    outline: none;
+}
+
+/* Reuses your elite high-conversion button properties natively */
+.kit-embedded-form .calc-btn {
+    width: 100%;
+    padding: 0.85rem;
+    background: #0284c7;
+    color: #ffffff !important;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.1);
+}
+
+.kit-embedded-form .calc-btn:hover {
+    background: #0369a1;
+}
+
+.kit-embedded-form .calc-btn:active {
+    transform: scale(0.98);
+}
+
+/* Mobile-First Grid Adjustments */
+@media (max-width: 480px) {
+    .kit-embedded-form {
+        padding: 1rem;
+    }
+    .kit-embedded-form label {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
+   HIGH-CONVERSION AFFILIATE COMPONENT BUTTONS
+   ========================================================================== */
+.affiliate-product-btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border: 1px solid #fde047;
+    color: #92400e !important;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none !important;
+    padding: 1.15rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(251, 191, 36, 0.08);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.affiliate-product-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #fef3c7 0%, #fde047 100%);
+    box-shadow: 0 6px 15px rgba(251, 191, 36, 0.15);
+}
+
+.affiliate-product-btn:active {
+    transform: scale(0.99);
+}

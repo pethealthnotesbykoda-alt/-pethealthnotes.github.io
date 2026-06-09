@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://pethealthnotes.com/app">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetHealthNotes App — AI Pet Health Tracker | Coming Soon to iOS &amp; Android</title>
+    <meta name="description" content="The PetHealthNotes App is an AI-powered pet health tracker coming soon to iOS and Android. Track vaccines, meds, symptoms with smart reminders. Join the waitlist for early access.">
+    <link rel="stylesheet" href="css/style.v2.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300C9A7'/><stop offset='100%25' stop-color='%230D1B3E'/></linearGradient></defs><rect fill='url(%23g)' width='108' height='108' rx='22'/><circle cx='35' cy='32' r='6.5' fill='white'/><circle cx='52' cy='28' r='6.5' fill='white'/><circle cx='70' cy='29' r='6.5' fill='white'/><circle cx='84' cy='36' r='6.5' fill='white'/><path d='M54,48 C38,48 28,56 24,72 C22,82 30,94 54,96 C78,94 86,82 84,72 C80,56 70,48 54,48Z' fill='white'/><path d='M40,70 L52,82 L74,58' stroke='%2300C9A7' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K49MKERR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3K49MKERR1');
+    </script>
+    <style>
+        .coming-soon-badge {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,165,2,0.12); border: 1px solid rgba(255,165,2,0.35);
+            color: #ffa502; padding: 6px 18px; border-radius: 50px;
+            font-size: 13px; font-weight: 700; margin-bottom: 28px;
+            animation: pulse 2.5s infinite;
+        }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.75} }
+        .waitlist-box {
+            background: rgba(0,201,167,0.06); border: 1px solid rgba(0,201,167,0.2);
+            border-radius: 20px; padding: 32px 28px; max-width: 480px;
+            margin: 0 auto 36px;
+        }
+        .waitlist-box h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+        .waitlist-box p { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; line-height: 1.6; }
+        .waitlist-form { display: flex; gap: 10px; }
+        .waitlist-form input {
+            flex: 1; background: var(--bg-surface,#0e1829); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px; color: var(--text-primary,#f0f4ff);
+            font-family: 'Outfit', sans-serif; font-size: 15px; padding: 13px 14px; outline: none;
+        }
+        .waitlist-form input:focus { border-color: var(--primary,#00C9A7); }
+        .waitlist-form button {
+            background: linear-gradient(135deg,#00C9A7,#009e84); border: none;
+            border-radius: 10px; color: #050d1a; font-family: 'Outfit', sans-serif;
+            font-size: 14px; font-weight: 700; padding: 13px 20px; cursor: pointer;
+            white-space: nowrap; transition: transform .15s;
+        }
+        .waitlist-form button:hover { transform: translateY(-1px); }
+        .waitlist-success { color: #00C9A7; font-size: 13px; font-weight: 600; margin-top: 12px; display: none; }
+        .progress-bar-wrap { background: rgba(255,255,255,0.06); border-radius: 50px; height: 8px; margin: 24px 0 8px; overflow: hidden; }
+        .progress-bar-fill { background: linear-gradient(90deg,#00C9A7,#009e84); height: 100%; width: 78%; border-radius: 50px; }
+        .feature-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+        .feature-card { background: var(--bg-surface,#0e1829); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 20px; }
+        .feature-card .feature-icon { font-size: 28px; margin-bottom: 10px; }
+        .feature-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+        .feature-card p { font-size: 13px; color: var(--text-secondary,#8fa3bf); line-height: 1.6; }
+        .highlight-card { border-color: rgba(0,201,167,0.25); background: rgba(0,201,167,0.05); }
+        .download-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 24px; }
+        .device-compat { color: var(--text-muted,#4a6080); font-size: 14px; margin-top: 20px; }
+        @media(max-width:700px) { .feature-grid { grid-template-columns: 1fr 1fr; } .waitlist-form { flex-direction: column; } }
+        @media(max-width:480px) { .feature-grid { grid-template-columns: 1fr; } }
+    </style>
+
+<meta name="robots" content="max-image-preview:large">
+<!-- PHN Dynamic Injector -->
+<script src="/js/phn-config.js"></script>
+<script src="/js/phn-injector.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">📋 PetHealth<span class="logo-accent">Notes</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"
+      onclick="this.classList.toggle('open');document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="category/symptom-logs.html" class="nav-link">📊 Symptom Logs</a>
+      <a href="category/frameworks.html" class="nav-link">🐕 10-Year Frameworks</a>
+      <a href="app.html" class="nav-link active">📱 Pet Tracker</a>
+      <a href="category/quick-diagnostics.html" class="nav-link emergency-tab">💡 Quick Diagnostics</a>
+    </nav>
+  </div>
+</header>
+
+    <main>
+        <section class="hero">
+            <div class="container" style="text-align:center;padding:80px 0 60px;">
+                <div class="coming-soon-badge">🚧 In Final Development</div>
+                <h1>Meet the <span class="highlight">PetHealthNotes App</span> — Your AI Health Companion</h1>
+                <p style="max-width:580px;margin:0 auto 36px;color:var(--text-secondary);font-size:18px;line-height:1.7;">
+                    Track vaccines, medications, and symptoms with AI-powered insights. Smart reminders, bowl scanning, and vet finder — all in one free app.
+                </p>
+
+                <div class="waitlist-box">
+                    <div style="font-size:36px;margin-bottom:12px;">🐾</div>
+                    <h3>Join the Early Access Waitlist</h3>
+                    <p>Be the first to know when the PetHealthNotes App launches on the App Store and Google Play. No spam — just one launch notification.</p>
+
+                    <div class="progress-bar-wrap">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                    <p style="font-size:12px;color:var(--text-muted,#4a6080);margin-bottom:20px;">78% complete — launching soon</p>
+
+                    <form action="https://app.kit.com/forms/9489853/subscriptions" method="post" target="_blank" class="waitlist-form" onsubmit="gtag('event', 'waitlist_signup', { source: 'app_hero' }); document.getElementById('waitlistSuccess').style.display = 'block'; setTimeout(() => this.reset(), 500);">
+                        <input type="email" name="email_address" id="waitlistEmail" placeholder="your@email.com" required>
+                        <button type="submit">Notify Me →</button>
+                    </form>
+                    <div class="waitlist-success" id="waitlistSuccess">✅ You're on the list! We'll email you at launch.</div>
+                </div>
+
+                <div class="device-compat">
+                    <p>📱 iOS 14.0+ &nbsp;•&nbsp; 📲 Android 8.0+ &nbsp;•&nbsp; Free to start</p>
+                </div>
+
+                <div class="trust-badges" style="margin-top:28px;">
+                    <div class="badge"><span class="badge-icon">🔒</span><span>Encrypted &amp; Private</span></div>
+                    <div class="badge"><span class="badge-icon">⭐</span><span>Free Core Features</span></div>
+                    <div class="badge"><span class="badge-icon">🌍</span><span>Works Offline</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>What you'll get with the PetHealthNotes App</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📓</div>
+                        <h3>Health Journal</h3>
+                        <p>Log symptoms, moods, meals, and hydration with smart categories. Works offline.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💊</div>
+                        <h3>Medication &amp; Vaccines</h3>
+                        <p>Track vaccines, medications, and set persistent reminders for doses.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Health Dashboard</h3>
+                        <p>At-a-glance health cards for vaccine, medication, and mood tracking.</p>
+                    </div>
+                    <div class="feature-card highlight-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3>AI Symptom Triage</h3>
+                        <p>Get AI-powered triage analysis. Know when to monitor vs. when to see a vet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📷</div>
+                        <h3>Smart Bowl Scanner</h3>
+                        <p>Snap a photo — AI measures food/water levels and logs automatically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📍</div>
+                        <h3>Vet Finder</h3>
+                        <p>Find nearby emergency vets and pet hospitals instantly.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3>AI Health Chat</h3>
+                        <p>Ask questions anytime — get instant, personalized answers based on your pet's history.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🐕</div>
+                        <h3>Multi-Pet Profiles</h3>
+                        <p>Manage multiple pets in one app. Each pet has their own health journal and schedule.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Breed Guide</h3>
+                        <p>Access breed-specific health information, common conditions, and care tips.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container" style="text-align:center;">
+                <h2>Be First to Know When We Launch</h2>
+                <p>Join 500+ pet parents already on the waitlist.</p>
+                <form action="https://app.kit.com/forms/9489853/subscriptions" method="post" target="_blank" class="waitlist-form" style="max-width:400px;margin:24px auto 0;" onsubmit="gtag('event', 'waitlist_signup', { source: 'app_cta' }); document.getElementById('waitlistSuccess2').style.display = 'block'; setTimeout(() => this.reset(), 500);">
+                    <input type="email" name="email_address" id="waitlistEmail2" placeholder="your@email.com" required>
+                    <button type="submit">Join Waitlist</button>
+                </form>
+                <div class="waitlist-success" id="waitlistSuccess2">✅ You're on the list!</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo"><span class="logo-icon small">P</span><strong>PetHealthNotes</strong></div>
+                <small>© 2026 PetHealthNotes. All rights reserved.</small>
+                <small><a href="app-ads.txt" style="color:var(--text-muted)">app-ads.txt</a></small>
+            </div>
+            <div class="footer-col">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:support@pethealthnotes.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission is handled natively via the Kit HTML forms.
+        // Success states and GA4 tracking are executed via the inline onsubmit attributes.
+    </script>
+
+<!-- Bribe-to-Buy Sticky Widget -->
+<style>
+.bribe-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FF5A5F;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+.bribe-sticky-bar a {
+    color: #fff;
+    background: #222;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bribe-sticky-bar a:hover {
+    background: #000;
+}
+</style>
+<div id="bribeBar" class="bribe-sticky-bar"></div>
+
+</body>
+</html>
+

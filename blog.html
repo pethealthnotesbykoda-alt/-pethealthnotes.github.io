@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://pethealthnotes.com/blog">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Health Blog — 10-Year Pet Parent Notes | PetHealthNotes</title>
+    <meta name="description" content="10+ years of hands-on pet parenting notes — written in plain language for real pet owners.">
+    <link rel="stylesheet" href="css/style.v2.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2300C9A7'/><stop offset='100%' stop-color='%230D1B3E'/></linearGradient></defs><rect fill='url(%23g)' width='108' height='108' rx='22'/><circle cx='35' cy='32' r='6.5' fill='white'/><circle cx='52' cy='28' r='6.5' fill='white'/><circle cx='70' cy='29' r='6.5' fill='white'/><circle cx='84' cy='36' r='6.5' fill='white'/><path d='M54,48 C38,48 28,56 24,72 C22,82 30,94 54,96 C78,94 86,82 84,72 C80,56 70,48 54,48Z' fill='white'/><path d='M40,70 L52,82 L74,58' stroke='%2300C9A7' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <style>
+        .blog-hero { padding: 80px 0 60px; background: var(--dark-canvas-gradient); text-align: center; }
+        .blog-hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 16px; }
+        .blog-hero p { font-size: 18px; color: var(--text-secondary); max-width: 600px; margin: 0 auto 32px; line-height: 1.7; }
+        .author-intro { display: inline-flex; align-items: center; gap: 12px; background: var(--bg-surface); border-radius: 50px; padding: 10px 20px 10px 10px; border: 1px solid rgba(255,255,255,0.08); }
+        .author-intro img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+        .author-intro span { font-size: 14px; color: var(--text-secondary); }
+        .author-intro strong { color: var(--text-primary); }
+        .blog-filters { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin: 40px 0 32px; }
+        .filter-btn { background: var(--bg-surface); border: 1px solid rgba(255,255,255,0.08); color: var(--text-secondary); padding: 8px 18px; border-radius: 50px; font-size: 14px; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+        .filter-btn:hover, .filter-btn.active { background: rgba(0,201,167,0.15); border-color: rgba(0,201,167,0.4); color: var(--primary); }
+        .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding-bottom: 80px; }
+        .blog-card { background: var(--bg-surface); border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .blog-card img { width: 100%; height: 200px; object-fit: cover; display: block; flex-shrink: 0; }
+        .blog-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+        .blog-card-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+        .blog-card-meta .tag { background: rgba(0,201,167,0.12); color: var(--primary); padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .blog-card-meta .date { font-size: 12px; color: var(--text-muted); }
+        .blog-card h2 { font-size: 17px; font-weight: 700; color: var(--text-primary); line-height: 1.4; margin-bottom: 10px; }
+        .blog-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+        .blog-card a.read-more { color: var(--primary); font-size: 14px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+        .blog-card a.read-more:hover { gap: 8px; }
+        .featured-card { grid-column: span 2; flex-direction: row; }
+        .featured-card img { width: 45%; height: auto; min-height: 280px; }
+        .featured-card .blog-card-body { padding: 28px; }
+        .featured-card h2 { font-size: 22px; }
+        .featured-card p { font-size: 15px; }
+        .featured-badge { display: inline-block; background: var(--primary); color: var(--bg-deep); padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+        @media (max-width: 900px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } .featured-card { grid-column: span 2; } }
+        @media (max-width: 640px) { .blog-grid { grid-template-columns: 1fr; } .featured-card { flex-direction: column; grid-column: span 1; } .featured-card img { width: 100%; height: 220px; } .blog-hero h1 { font-size: 32px; } }
+    </style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K49MKERR1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3K49MKERR1');
+</script>
+<meta name="robots" content="max-image-preview:large">
+<!-- PHN Dynamic Injector -->
+<script src="/js/phn-config.js"></script>
+<script src="/js/phn-injector.js" defer></script>
+</head>
+<body class="light-layout">
+<header class="site-header">
+  <div class="header-container">
+    <a href="index.html" class="logo">📋 PetHealth<span class="logo-accent">Notes</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"
+      onclick="this.classList.toggle('open');document.getElementById('mainNav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="category/symptom-logs.html" class="nav-link">📊 Symptom Logs</a>
+      <a href="category/frameworks.html" class="nav-link">🐕 10-Year Frameworks</a>
+      <a href="app.html" class="nav-link">📱 Pet Tracker</a>
+      <a href="category/quick-diagnostics.html" class="nav-link emergency-tab">💡 Quick Diagnostics</a>
+    </nav>
+  </div>
+</header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Pet Health, Explained Clearly</h1>
+            <p>Vet-written articles on dog health, cat care, nutrition, and emergency preparedness. Written in plain language for real pet owners — not medical students.</p>
+            <div class="author-intro">
+                <img src="img/author-vishal.jpeg" alt="Vishal, Pet Health Notes Founder">
+                <span>All articles written by <strong>Vishal</strong> &mdash; 10+ Year Pet Parent &amp; Founder of PetHealthNotes</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="blog-filters">
+            <button class="filter-btn active">All Articles</button>
+            <button class="filter-btn">Dog Health</button>
+            <button class="filter-btn">Cat Care</button>
+            <button class="filter-btn">Nutrition</button>
+            <button class="filter-btn">Emergency</button>
+            <button class="filter-btn">New Pet</button>
+        </div>
+
+        <div class="blog-grid">
+
+            <!-- Featured: Signs Your Pet Needs a Vet -->
+            <a href="signs-your-pet-needs-a-vet.html" class="blog-card featured-card" style="text-decoration:none">
+                <img src="img/signs-vet-visit.jpg" alt="Pet owner calling the vet late at night with sick dog">
+                <div class="blog-card-body">
+                    <span class="featured-badge">⭐ Most Important</span>
+                    <div class="blog-card-meta"><span class="tag">Pet Health</span><span class="date">April 30, 2025</span></div>
+                    <h2>Signs Your Pet Needs a Vet Visit — And When to Go to Emergency Care</h2>
+                    <p>Every pet owner faces this question at 11pm. Here's a clear, practical 3-tier framework: go now, see your vet within 24 hours, or monitor and call in the morning.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="pet-first-aid-kit.html" class="blog-card" style="text-decoration:none">
+                <img src="img/pet-first-aid.jpg" alt="Pet first aid kit supplies laid out on a table">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Emergency Care</span><span class="date">May 7, 2025</span></div>
+                    <h2>Pet First Aid Kit Essentials: What to Pack and When to Use It</h2>
+                    <p>Emergencies don't schedule themselves. Have the right supplies ready — and know exactly what to do before you reach the vet.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="dogs-eat-blueberries.html" class="blog-card" style="text-decoration:none">
+                <img src="img/dogs-blueberries.jpg" alt="Golden retriever eating blueberries from owner's hand">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Dog Nutrition</span><span class="date">May 25, 2025</span></div>
+                    <h2>Can Dogs Eat Blueberries? A Vet's Safety Guide by Life Stage</h2>
+                    <p>Short answer: yes, and they're genuinely good for dogs. But how many, when to skip them, and what to watch for — that's where most owners get it wrong.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="safe-foods-dogs.html" class="blog-card" style="text-decoration:none">
+                <img src="img/safe-foods-dogs.jpg" alt="Safe human foods for dogs on a cutting board">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Dog Nutrition</span><span class="date">May 13, 2025</span></div>
+                    <h2>Safe Human Foods for Dogs: A Vet-Reviewed List (With Portions)</h2>
+                    <p>Your dog is staring at your plate. Before you give in, know what's genuinely safe to share — and what could land you in an emergency clinic.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="senior-dog-arthritis.html" class="blog-card" style="text-decoration:none">
+                <img src="img/senior-dog-arthritis.jpg" alt="Senior golden retriever resting on a dog bed">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Senior Dog Care</span><span class="date">May 19, 2025</span></div>
+                    <h2>Senior Dog Arthritis: Early Signs, Pain Management & Comfort Strategies</h2>
+                    <p>80% of dogs over 8 have arthritis. Most are hiding the pain. Here are the subtle early signs and what you can actually do to help them feel better.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="indoor-cat-enrichment.html" class="blog-card" style="text-decoration:none">
+                <img src="img/indoor-cat-enrichment.jpg" alt="Tabby cat playing with a feather wand toy">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Cat Care</span><span class="date">May 22, 2025</span></div>
+                    <h2>Indoor Cat Enrichment: 10 Vet-Approved Activities Under $20</h2>
+                    <p>A bored cat isn't just annoying — it's a cat quietly suffering. Here are 10 enrichment ideas that genuinely work, sourced from behavioral science.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 7 -->
+            <a href="puppy-vaccination-schedule.html" class="blog-card" style="text-decoration:none">
+                <img src="img/puppy-vaccination.jpg" alt="Vet examining a puppy on a checkup table">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Puppy Care</span><span class="date">May 16, 2025</span></div>
+                    <h2>Puppy Vaccination Schedule: A Complete Timeline + FAQs</h2>
+                    <p>Which vaccines your puppy needs, when to get them, what to watch for afterward — in plain language, not medical jargon. Plus a visual timeline.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 8 -->
+            <a href="dog-anxiety-storms.html" class="blog-card" style="text-decoration:none">
+                <img src="img/dog-anxiety-storm.jpg" alt="Nervous dog hiding under a bed during a thunderstorm">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Dog Behavior</span><span class="date">May 4, 2025</span></div>
+                    <h2>Dog Anxiety During Storms: Why It Happens and What Actually Helps</h2>
+                    <p>Your dog isn't being dramatic. They're genuinely frightened by multiple simultaneous stimuli — and the anxiety worsens if untreated. Here's what actually works.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 9 -->
+            <a href="how-to-trim-cat-nails.html" class="blog-card" style="text-decoration:none">
+                <img src="img/cat-nail-trim.jpg" alt="Person calmly trimming a cat's nails at home">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Cat Grooming</span><span class="date">May 10, 2025</span></div>
+                    <h2>How to Trim Your Cat's Nails Without Getting Scratched</h2>
+                    <p>The right technique makes an enormous difference. After years of doing this professionally, here's the approach that works — even with resistant cats.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 10 -->
+            <a href="new-pet-introduction.html" class="blog-card" style="text-decoration:none">
+                <img src="img/new-pet-introduction.jpg" alt="Family introducing a new puppy to their resident dog">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">New Pet</span><span class="date">April 25, 2025</span></div>
+                    <h2>Introducing a New Pet to Your Home: A 7-Day Transition Plan</h2>
+                    <p>The most common mistake is moving too fast. Here's the structured 7-day plan that builds bonds — and prevents lasting conflict between pets.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 11 -->
+            <a href="cat-urinary-health.html" class="blog-card" style="text-decoration:none">
+                <img src="img/cat-urinary-health.jpg" alt="Orange tabby cat at a vet clinic for urinary checkup">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Cat Health</span><span class="date">April 20, 2025</span></div>
+                    <h2>Feline Lower Urinary Tract Disease (FLUTD): A Prevention Guide</h2>
+                    <p>FLUTD is painful, common, and largely preventable. What's actually causing it, the warning signs to catch early, and what environmental changes genuinely reduce risk.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 12 -->
+            <a href="pet-food-labels.html" class="blog-card" style="text-decoration:none">
+                <img src="img/pet-nutrition-label.jpg" alt="Person reading a pet food label at the grocery store">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Pet Nutrition</span><span class="date">April 15, 2025</span></div>
+                    <h2>Understanding Pet Food Labels: What Vets Actually Look For</h2>
+                    <p>"Natural," "premium," "grain-free" — these terms sell food but mean almost nothing nutritionally. Here's how to evaluate what you're actually feeding your pet.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 13 -->
+            <a href="giving-pets-medication.html" class="blog-card" style="text-decoration:none">
+                <img src="img/pet-medication.jpg" alt="Person giving a dog a pill hidden in cheese">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Pet Care Tips</span><span class="date">April 10, 2025</span></div>
+                    <h2>Giving Your Pet Medication at Home: A Stress-Free Guide</h2>
+                    <p>Your vet prescribed medication. Your cat disagrees. Here are the techniques that actually work — from pill pockets to the direct method — for both dogs and cats.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 14 -->
+            <a href="bird-feather-plucking.html" class="blog-card" style="text-decoration:none">
+                <img src="img/bird-feather-health.jpg" alt="Small parrot with ruffled feathers indoors">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Bird Health</span><span class="date">April 5, 2025</span></div>
+                    <h2>Bird Feather Plucking: Stress, Illness, or Both?</h2>
+                    <p>A feather-plucking bird is sending a message. Decoding whether it's medical, behavioral, or both changes everything about how you respond — and how quickly your bird recovers.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+            <!-- Card 15 -->
+            <a href="pet-dental-health.html" class="blog-card" style="text-decoration:none">
+                <img src="img/senior-dog-arthritis.jpg" alt="Veterinarian examining a dog's teeth">
+                <div class="blog-card-body">
+                    <div class="blog-card-meta"><span class="tag">Pet Health</span><span class="date">March 28, 2025</span></div>
+                    <h2>Pet Dental Health: The Guide Most Owners Skip (And Shouldn't)</h2>
+                    <p>80% of dogs have dental disease by age 3. Most owners don't know because pets hide dental pain. What's actually happening in your pet's mouth — and what to do.</p>
+                    <span class="read-more">Read article →</span>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo"><span class="logo-icon small">P</span><strong>Pet Health Notes</strong></div>
+                <small>© 2026 Pet Health Notes. All rights reserved.</small>
+            </div>
+            <div class="footer-col">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="mailto:support@pethealthnotes.com">Contact</a>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 16px;">
+            <small style="color: var(--text-muted); font-size: 12px;">The content on Pet Health Notes is for informational purposes only and does not substitute for professional veterinary advice. Always consult a licensed veterinarian for your pet's specific health needs. Pet Health Notes may participate in affiliate programs.</small>
+        </div>
+    </footer>
+
+<!-- Bribe-to-Buy Sticky Widget -->
+<style>
+.bribe-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FF5A5F;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+.bribe-sticky-bar a {
+    color: #fff;
+    background: #222;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bribe-sticky-bar a:hover {
+    background: #000;
+}
+</style>
+<div id="bribeBar" class="bribe-sticky-bar"></div>
+
+</body>
+</html>
+

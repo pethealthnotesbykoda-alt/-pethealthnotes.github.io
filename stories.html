@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://pethealthnotes.com/stories">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Dog Stories & Health Journeys | Pet Health Notes Community</title>
+    <meta name="description" content="Read real, unfiltered stories from dog parents managing arthritis, IVDD, allergies, and puppyhood. Submit your dog's story to help others.">
+    <link rel="stylesheet" href="css/style.v2.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300C9A7'/><stop offset='100%25' stop-color='%230D1B3E'/></linearGradient></defs><rect fill='url(%23g)' width='108' height='108' rx='22'/><circle cx='35' cy='32' r='6.5' fill='white'/><circle cx='52' cy='28' r='6.5' fill='white'/><circle cx='70' cy='29' r='6.5' fill='white'/><circle cx='84' cy='36' r='6.5' fill='white'/><path d='M54,48 C38,48 28,56 24,72 C22,82 30,94 54,96 C78,94 86,82 84,72 C80,56 70,48 54,48Z' fill='white'/><path d='M40,70 L52,82 L74,58' stroke='%2300C9A7' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K49MKERR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3K49MKERR1');
+    </script>
+    <style>
+        .hero {
+            background: var(--dark-canvas-gradient, linear-gradient(135deg, #0f172a, #1e293b));
+            color: #fff;
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            line-height: 1.7;
+        }
+        .btn-submit {
+            display: inline-block;
+            background: #00C9A7;
+            color: #0f172a;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            background: #00e0ba;
+        }
+
+        /* Masonry Grid */
+        .masonry {
+            column-count: 3;
+            column-gap: 24px;
+            padding: 60px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        @media (max-width: 900px) { .masonry { column-count: 2; } }
+        @media (max-width: 600px) { .masonry { column-count: 1; } }
+
+        .story-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            break-inside: avoid;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .story-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .story-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .story-meta h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin: 0 0 4px;
+            font-weight: 700;
+        }
+        .story-meta .tag {
+            font-size: 0.75rem;
+            background: rgba(0,201,167,0.15);
+            color: #0284c7;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .story-content {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        .story-quote-icon {
+            font-size: 2rem;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .author-name {
+            display: block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            font-weight: 600;
+        }
+    </style>
+<!-- PHN Dynamic Injector -->
+<script src="/js/phn-config.js"></script>
+<script src="/js/phn-injector.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">📋 PetHealth<span class="logo-accent">Notes</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Open menu"
+                onclick="this.classList.toggle('open');document.getElementById('mainNav').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <a href="category/symptom-logs.html" class="nav-link">📊 Symptom Logs</a>
+                <a href="category/frameworks.html" class="nav-link">🐕 10-Year Frameworks</a>
+                <a href="app.html" class="nav-link">📱 Pet Tracker</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <span style="font-size: 3rem; display: block; margin-bottom: 16px;">📖</span>
+            <h1>Real Dogs. Real Stories.</h1>
+            <p>Navigating pet health can feel incredibly isolating. Read raw, unfiltered experiences from dog parents who have been exactly where you are right now.</p>
+            <a href="#submit-story" class="btn-submit">Submit Your Dog's Story</a>
+        </div>
+    </section>
+
+    <div class="masonry">
+        
+        <!-- Story 1 -->
+        <div class="story-card">
+            <span class="story-quote-icon">"</span>
+            <div class="story-header">
+                <div class="story-avatar"><img src="/img/author-vishal.jpeg" alt="Vishal"></div>
+                <div class="story-meta">
+                    <h3>DON's Senior Journey</h3>
+                    <span class="tag">Arthritis & Mobility</span>
+                </div>
+            </div>
+            <p class="story-content">Watching DON slip on our hardwood floors broke my heart. I thought he was just 'getting old'. Once we laid down yoga mats and started giving him joint supplements, it was like someone turned the clock back two years. Don't underestimate how much environmental changes help.</p>
+            <span class="author-name">— Vishal (Founder)</span>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="story-card">
+            <span class="story-quote-icon">"</span>
+            <div class="story-header">
+                <div class="story-avatar">🐕</div>
+                <div class="story-meta">
+                    <h3>Max's IVDD Recovery</h3>
+                    <span class="tag">Spinal Health</span>
+                </div>
+            </div>
+            <p class="story-content">When Max suddenly couldn't use his back legs, I panicked. The ER vet diagnosed him with Stage 3 IVDD. We opted for strict crate rest and laser therapy. The first 4 weeks were a nightmare of carrying him out to potty, but by week 6, he was walking again. For anyone going through this: patience is everything. Stick to the crate rest strictly.</p>
+            <span class="author-name">— Sarah M., Chicago</span>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="story-card">
+            <span class="story-quote-icon">"</span>
+            <div class="story-header">
+                <div class="story-avatar">🐾</div>
+                <div class="story-meta">
+                    <h3>Bella's Parvo Scare</h3>
+                    <span class="tag">Puppy Health</span>
+                </div>
+            </div>
+            <p class="story-content">I skipped one booster shot because she 'seemed fine' and we took her to the pet store. Three days later, she stopped eating and the diarrhea started. She spent 5 days in the ICU. It cost us $4,000 to save her life. Please, please finish the vaccine schedule before taking your puppy out.</p>
+            <span class="author-name">— David T., Seattle</span>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="story-card">
+            <span class="story-quote-icon">"</span>
+            <div class="story-header">
+                <div class="story-avatar">🐶</div>
+                <div class="story-meta">
+                    <h3>Cooper's Separation Anxiety</h3>
+                    <span class="tag">Behavioral</span>
+                </div>
+            </div>
+            <p class="story-content">Cooper used to destroy the blinds every time I left the house. We tried everything. What finally worked was a combination of a Snuggle Puppy (with the heartbeat), leaving the TV on a nature channel, and practicing leaving for just 5 minutes at a time. It took 6 months of training, but now he just sleeps on the couch.</p>
+            <span class="author-name">— Emma L., Austin</span>
+        </div>
+
+        <!-- Story 5 -->
+        <div class="story-card">
+            <span class="story-quote-icon">"</span>
+            <div class="story-header">
+                <div class="story-avatar">🐕</div>
+                <div class="story-meta">
+                    <h3>Luna's Food Allergies</h3>
+                    <span class="tag">Diet & Allergies</span>
+                </div>
+            </div>
+            <p class="story-content">Luna had constant ear infections and was licking her paws raw. Our vet suggested an elimination diet. It turns out she was severely allergic to chicken—which is in almost everything! Switching her to a limited-ingredient salmon food cleared up her skin completely within a month.</p>
+            <span class="author-name">— Mark & Jess, Boston</span>
+        </div>
+
+    </div>
+
+    <!-- Submission Form Section -->
+    <section id="submit-story" style="background: #f8fafc; padding: 80px 24px; border-top: 1px solid #e2e8f0;">
+        <div class="container" style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: 2rem; color: #0f172a; margin-bottom: 16px; font-weight: 700;">Share Your Journey</h2>
+            <p style="color: #475569; margin-bottom: 32px; line-height: 1.6;">Your experience could be exactly what another dog parent needs to read right now. Submit your story below, and we'll feature it in the community feed.</p>
+            
+            <form id="storyForm" action="https://api.web3forms.com/submit" method="POST" style="background: #fff; padding: 32px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); text-align: left; border: 1px solid #e2e8f0;">
+                <input type="hidden" name="access_key" value="2bcbfa78-959e-4e41-9977-d1997d9099c1">
+                <input type="hidden" name="redirect" value="https://pethealthnotes.com/thank-you.html">
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 0.9rem; font-weight: 600; color: #334155; margin-bottom: 8px;">Your Dog's Name &amp; Condition</label>
+                    <input type="text" name="dog_condition" placeholder="e.g., Buster's fight with Arthritis" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; outline: none; box-sizing: border-box;" required>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 0.9rem; font-weight: 600; color: #334155; margin-bottom: 8px;">Your Story</label>
+                    <textarea name="story" rows="5" placeholder="Tell us what happened, what you learned, and what advice you'd give to others..." style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; outline: none; box-sizing: border-box; resize: vertical;" required></textarea>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label style="display: block; font-size: 0.9rem; font-weight: 600; color: #334155; margin-bottom: 8px;">Your Name (First name is fine)</label>
+                    <input type="text" name="first_name" placeholder="e.g., Alex" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; outline: none; box-sizing: border-box;" required>
+                </div>
+                <div style="margin-bottom: 24px;">
+                    <label style="display: block; font-size: 0.9rem; font-weight: 600; color: #334155; margin-bottom: 8px;">Your Email Address (For our team only)</label>
+                    <input type="email" name="email_address" placeholder="e.g., alex@example.com" style="width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: inherit; outline: none; box-sizing: border-box;" required>
+                </div>
+                <button type="submit" id="storySubmitBtn" style="width: 100%; background: #0f172a; color: #fff; border: none; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s;">Submit Story →</button>
+                <div id="storySuccess" style="display:none; margin-top:16px; background:#f0fdf4; border:1px solid #86efac; padding:16px; border-radius:8px; color:#166534; font-weight:600;">✅ Thank you! We received your story and will review it within 2–3 days.</div>
+                <div id="storyError" style="display:none; margin-top:16px; background:#fef2f2; border:1px solid #fca5a5; padding:16px; border-radius:8px; color:#991b1b;">❌ Something went wrong. Please email us directly at <a href="mailto:support@pethealthnotes.com">support@pethealthnotes.com</a>.</div>
+            </form>
+            <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 16px;">*Stories are reviewed for safety and clarity before being published.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content" style="padding: 40px 24px;">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="logo-icon small">P</span>
+                    <strong>Pet Health Notes</strong>
+                </div>
+                <small>© 2026 Pet Health Notes. All rights reserved.</small>
+            </div>
+            <div class="footer-col">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('storyForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('storySubmitBtn');
+        const success = document.getElementById('storySuccess');
+        const error = document.getElementById('storyError');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
+            });
+            const json = await res.json();
+            if (json.success) {
+                if (window.gtag) gtag('event', 'story_submitted', { page_path: window.location.pathname });
+                window.location.href = 'thank-you.html';
+            } else {
+                throw new Error('Failed');
+            }
+        } catch {
+            error.style.display = 'block';
+            success.style.display = 'none';
+        } finally {
+            btn.textContent = 'Submit Story →';
+            btn.disabled = false;
+        }
+    });
+    </script>
+</body>
+</html>
+

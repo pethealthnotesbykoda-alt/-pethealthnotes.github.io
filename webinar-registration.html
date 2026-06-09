@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://pethealthnotes.com/webinar-registration">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Workshop: Senior Dog Mobility Masterclass | Pet Health Notes</title>
+    <meta name="description" content="Join our free live workshop to learn the exact home modifications, joint supplements, and exercises that can add years of comfortable mobility to your senior dog's life.">
+    <link rel="stylesheet" href="css/style.v2.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300C9A7'/><stop offset='100%25' stop-color='%230D1B3E'/></linearGradient></defs><rect fill='url(%23g)' width='108' height='108' rx='22'/><circle cx='35' cy='32' r='6.5' fill='white'/><circle cx='52' cy='28' r='6.5' fill='white'/><circle cx='70' cy='29' r='6.5' fill='white'/><circle cx='84' cy='36' r='6.5' fill='white'/><path d='M54,48 C38,48 28,56 24,72 C22,82 30,94 54,96 C78,94 86,82 84,72 C80,56 70,48 54,48Z' fill='white'/><path d='M40,70 L52,82 L74,58' stroke='%2300C9A7' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3K49MKERR1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3K49MKERR1');
+    </script>
+    <style>
+        /* Landing Page Specific Overrides */
+        body { background: #f8fafc; }
+        
+        /* Simplified Header - Remove Nav to keep focus on Registration */
+        .landing-header {
+            background: #fff;
+            padding: 20px 24px;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        /* Two-Column Hero Layout */
+        .webinar-hero {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 450px;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .webinar-content h1 {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        .webinar-content h1 span {
+            color: #0284c7;
+        }
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(220, 38, 38, 0.1);
+            color: #dc2626;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #dc2626;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+
+        .webinar-content p {
+            font-size: 1.2rem;
+            color: #475569;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+        }
+        .bullet-list li {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .bullet-icon {
+            color: #00C9A7;
+            font-size: 1.2rem;
+            margin-top: 2px;
+        }
+
+        /* Registration Form Box */
+        .registration-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .registration-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+        .registration-box p {
+            font-size: 0.95rem;
+            color: #64748b;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #334155;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: #0284c7;
+        }
+
+        .btn-register {
+            width: 100%;
+            background: #0284c7;
+            color: #fff;
+            border: none;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            margin-top: 8px;
+            box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+        }
+        .btn-register:hover {
+            transform: translateY(-2px);
+            background: #0369a1;
+        }
+
+        .spots-left {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #dc2626;
+        }
+
+        /* Host Bio Section */
+        .host-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid #e2e8f0;
+        }
+        .host-img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .host-info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0f172a;
+            margin: 0 0 4px;
+        }
+        .host-info p {
+            font-size: 0.9rem;
+            color: #475569;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 992px) {
+            .webinar-hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .bullet-list li {
+                text-align: left;
+            }
+            .host-section {
+                justify-content: center;
+                text-align: left;
+            }
+        }
+    </style>
+<!-- PHN Dynamic Injector -->
+<script src="/js/phn-config.js"></script>
+<script src="/js/phn-injector.js" defer></script>
+</head>
+<body>
+
+    <!-- Simplified Header for Landing Pages -->
+    <header class="landing-header">
+        <a href="index.html" class="logo" style="margin: 0;">📋 PetHealth<span class="logo-accent">Notes</span></a>
+    </header>
+
+    <main>
+        <section class="webinar-hero">
+            <!-- Left Side: Copy -->
+            <div class="webinar-content">
+                <div class="live-badge"><div class="live-dot"></div> Free Live Masterclass</div>
+                <h1>The Senior Dog <span>Mobility Blueprint</span></h1>
+                <p>Is your dog starting to slip on the floor, hesitate before stairs, or struggle to stand up? Don't wait for it to get worse. Learn the exact at-home strategies to restore their confidence and eliminate silent joint pain.</p>
+                
+                <ul class="bullet-list">
+                    <li><span class="bullet-icon">✅</span> <strong>The "Slip-Stop" Method:</strong> The $20 home modification that instantly restores a senior dog's walking confidence.</li>
+                    <li><span class="bullet-icon">✅</span> <strong>The Supplement Truth:</strong> Why 80% of joint supplements are just expensive treats, and the exact ingredients to look for instead.</li>
+                    <li><span class="bullet-icon">✅</span> <strong>The 5-Minute Daily Routine:</strong> A gentle, vet-approved home massage technique that relieves morning stiffness without drugs.</li>
+                </ul>
+
+                <div class="host-section">
+                    <img src="/img/author-vishal.jpeg" alt="Vishal" class="host-img">
+                    <div class="host-info">
+                        <h4>Hosted by Vishal</h4>
+                        <p>Founder of Pet Health Notes • 10+ Years as a Pet Parent • Advocate for Senior Dog Care</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Registration Form -->
+            <div class="registration-box">
+                <h3>Save Your Free Seat</h3>
+                <p>Next Session: Thursday at 7:00 PM EST</p>
+
+                <!-- NOTE: Replace form action URL below with the Kit/ConvertKit Form Action URL for the Webinar -->
+                <form action="https://app.kit.com/forms/PLACEHOLDER_WEBINAR_FORM/subscriptions" method="POST" onsubmit="gtag('event', 'webinar_registration', { source: 'landing_page' });">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" class="form-control" placeholder="e.g. Alex" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email_address">Email Address</label>
+                        <input type="email" id="email_address" name="email_address" class="form-control" placeholder="Where should we send the link?" required>
+                    </div>
+                    <button type="submit" class="btn-register">Register Now</button>
+                    <p class="spots-left">🔥 Only 34 spots remaining</p>
+                </form>
+                <p style="font-size: 0.8rem; color: #94a3b8; text-align: center; margin-top: 16px;">By registering, you agree to receive our free weekly pet health newsletter. Unsubscribe anytime.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #94a3b8; font-size: 0.85rem;">
+        <p>© 2026 Pet Health Notes. <a href="privacy.html" style="color: #94a3b8;">Privacy Policy</a></p>
+    </footer>
+
+</body>
+</html>
+

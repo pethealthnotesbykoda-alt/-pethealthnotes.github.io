@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://pethealthnotes.com/contact">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pet Health Notes</title>
+    <meta name="description" content="Get in touch with Pet Health Notes. Send us your questions, feedback, or partnership enquiries. We read every message.">
+    <link rel="stylesheet" href="css/style.v2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2300C9A7'/><stop offset='100%' stop-color='%230D1B3E'/></linearGradient></defs><rect fill='url(%23g)' width='108' height='108' rx='22'/><circle cx='35' cy='32' r='6.5' fill='white'/><circle cx='52' cy='28' r='6.5' fill='white'/><circle cx='70' cy='29' r='6.5' fill='white'/><circle cx='84' cy='36' r='6.5' fill='white'/><path d='M54,48 C38,48 28,56 24,72 C22,82 30,94 54,96 C78,94 86,82 84,72 C80,56 70,48 54,48Z' fill='white'/><path d='M40,70 L52,82 L74,58' stroke='%2300C9A7' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+    <style>
+        .contact-hero { padding: 80px 0 60px; background: var(--dark-canvas-gradient); }
+        .contact-hero h1 { font-size: 44px; font-weight: 700; margin-bottom: 16px; }
+        .contact-hero p { font-size: 18px; color: var(--text-secondary); max-width: 560px; line-height: 1.7; }
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; max-width: 900px; margin: 0 auto; padding: 60px 24px 80px; }
+        .contact-form-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: var(--text-secondary); margin-bottom: 8px; }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 12px 16px; background: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+            color: var(--text-primary); font-family: inherit; font-size: 15px;
+            transition: border-color 0.2s; box-sizing: border-box;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none; border-color: var(--primary);
+        }
+        .form-group textarea { resize: vertical; min-height: 140px; }
+        .form-group select option { background: #1A2A4A; }
+        .submit-btn {
+            background: var(--primary); color: var(--bg-deep);
+            border: none; padding: 14px 32px; border-radius: 10px;
+            font-size: 16px; font-weight: 700; cursor: pointer;
+            width: 100%; font-family: inherit; transition: opacity 0.2s;
+        }
+        .submit-btn:hover { opacity: 0.9; }
+        .contact-info-section { padding-top: 8px; }
+        .contact-info-section h2 { font-size: 24px; font-weight: 700; margin-bottom: 24px; }
+        .info-card { background: var(--bg-surface); border-radius: 14px; padding: 20px 24px; margin-bottom: 16px; border: 1px solid rgba(255,255,255,0.06); display: flex; gap: 16px; align-items: flex-start; }
+        .info-card .icon { font-size: 24px; flex-shrink: 0; }
+        .info-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; color: var(--text-primary); }
+        .info-card p { margin: 0; font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+        .info-card a { color: var(--primary); text-decoration: none; }
+        .faq-section { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+        .faq-section h2 { font-size: 26px; font-weight: 700; margin-bottom: 28px; }
+        .faq-item { background: var(--bg-surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.06); }
+        .faq-item h3 { font-size: 16px; font-weight: 600; margin-bottom: 10px; color: var(--text-primary); }
+        .faq-item p { margin: 0; font-size: 15px; color: var(--text-secondary); line-height: 1.7; }
+        .success-msg { display: none; background: rgba(0,201,167,0.1); border: 1px solid rgba(0,201,167,0.3); border-radius: 10px; padding: 16px; color: var(--primary); font-size: 15px; margin-top: 16px; }
+        @media (max-width: 700px) { .contact-layout { grid-template-columns: 1fr; } .contact-hero h1 { font-size: 30px; } }
+    </style>
+<!-- Google Analytics GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3K49MKERR1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3K49MKERR1');
+</script>
+<meta name="robots" content="max-image-preview:large">
+<!-- PHN Dynamic Injector -->
+<script src="/js/phn-config.js"></script>
+<script src="/js/phn-injector.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><span class="logo-icon">P</span><span class="logo-text">Pet Health Notes</span></a>
+            <button class="hamburger" id="hamburger" onclick="this.classList.toggle('open');document.getElementById('navLinks').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="app.html">Download</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get in Touch</h1>
+            <p>Have a question, a topic suggestion, or just want to say hi? We read every message and reply within 2–3 business days.</p>
+        </div>
+    </section>
+
+    <div class="contact-layout">
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+            <h2>Send a Message</h2>
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="2bcbfa78-959e-4e41-9977-d1997d9099c1">
+                <input type="hidden" name="redirect" value="https://pethealthnotes.com/thank-you.html">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="e.g. Priya Sharma" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">What's this about?</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Question</option>
+                        <option value="article">Article Feedback or Correction</option>
+                        <option value="topic">Suggest a Topic</option>
+                        <option value="app">Pet Health Notes App</option>
+                        <option value="partnership">Partnership / Collaboration</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message →</button>
+                <div class="success-msg" id="successMsg">✓ Thanks! Your message was sent. We'll get back to you within 2–3 business days.</div>
+            </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info-section">
+            <h2>Other Ways to Reach Us</h2>
+
+            <div class="info-card">
+                <div class="icon">✉️</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>For all enquiries: <a href="mailto:support@pethealthnotes.com">support@pethealthnotes.com</a><br>
+                    We typically reply within 2–3 business days.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">📱</div>
+                <div>
+                    <h3>App Support</h3>
+                    <p>Having trouble with the Pet Health Notes app? Email us at <a href="mailto:support@pethealthnotes.com">support@pethealthnotes.com</a> with your device and issue description.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">✍️</div>
+                <div>
+                    <h3>Content Corrections</h3>
+                    <p>Spotted an error in one of our articles? Please let us know — accuracy matters to us and we take corrections seriously. Include the article URL in your message.</p>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <div class="icon">⚠️</div>
+                <div>
+                    <h3>Pet Emergency?</h3>
+                    <p>We are not a veterinary service. For urgent pet health concerns, please contact your local vet or the <a href="https://www.aspca.org/pet-care/animal-poison-control" target="_blank" rel="noopener">ASPCA Poison Control: +1-888-426-4435</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+            <h3>Can I get advice about my specific pet's health problem?</h3>
+            <p>We're not able to provide individual veterinary advice — that requires a proper examination by a licensed vet who knows your pet. Our articles are educational guides for general information. For anything specific to your pet, please consult your veterinarian.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>How do I suggest a topic for a new article?</h3>
+            <p>Use the contact form above and select "Suggest a Topic." Tell us what you searched for and couldn't find a good answer to — that's exactly the kind of gap we want to fill. We read all suggestions and prioritise the most common requests.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Are your articles reviewed by a veterinarian?</h3>
+            <p>Yes. All health-related articles on Pet Health Notes are reviewed by a licensed veterinarian for medical accuracy before publication. The site itself is run by a passionate pet parent — not a vet — but we take accuracy seriously enough to have professional review built into our process.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Is the Pet Health Notes app free?</h3>
+            <p>The app has a free tier that covers core features including pet profiles, journal entries, and basic health tracking. Premium features are available via subscription. <a href="app.html" style="color: var(--primary);">Learn more about the app →</a></p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Do you accept guest posts or sponsored content?</h3>
+            <p>We currently do not accept unsolicited guest posts or paid placements that aren't clearly disclosed. If you're interested in a legitimate editorial collaboration, email us at support@pethealthnotes.com with details and we'll consider it on a case-by-case basis.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo"><span class="logo-icon small">P</span><strong>Pet Health Notes</strong></div>
+                <small>© 2025 Pet Health Notes. All rights reserved.</small>
+            </div>
+            <div class="footer-col">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 16px;">
+            <small style="color: var(--text-muted); font-size: 12px;">The content on Pet Health Notes is for informational purposes only. Always consult your veterinarian before acting on any advice found here.</small>
+        </div>
+    </footer>
+
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('.submit-btn');
+        const success = document.getElementById('successMsg');
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+        try {
+            const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
+            });
+            const json = await res.json();
+            if (json.success) {
+                if (window.gtag) gtag('event', 'contact_form_submit');
+                window.location.href = 'thank-you.html';
+            } else {
+                alert('Something went wrong. Please email support@pethealthnotes.com directly.');
+            }
+        } catch {
+            alert('Network error. Please email support@pethealthnotes.com directly.');
+        } finally {
+            btn.textContent = 'Send Message →';
+            btn.disabled = false;
+        }
+    });
+    </script>
+
+<!-- Bribe-to-Buy Sticky Widget -->
+<style>
+.bribe-sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #FF5A5F;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+}
+.bribe-sticky-bar a {
+    color: #fff;
+    background: #222;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bribe-sticky-bar a:hover {
+    background: #000;
+}
+</style>
+<div id="bribeBar" class="bribe-sticky-bar"></div>
+
+</body>
+</html>

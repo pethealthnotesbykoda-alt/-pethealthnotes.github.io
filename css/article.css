@@ -1,0 +1,473 @@
+/* ============================================================
+   ARTICLE.CSS — Pet Health Notes
+   Shared styles for all blog article pages
+   Mobile-first, Google Discover optimised
+   ============================================================ */
+
+/* ---------- Article hero ---------- */
+.article-hero {
+  padding: 56px 0 36px;
+  background: var(--dark-canvas-gradient);
+}
+.article-hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  max-width: 800px;
+}
+.article-hero .lead {
+  font-size: 18px;
+  color: var(--text-secondary);
+  max-width: 700px;
+  line-height: 1.7;
+}
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.article-meta .tag {
+  background: rgba(0,201,167,0.15);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.article-meta .date {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ---------- Article body ---------- */
+.article-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+.article-body h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 40px 0 16px;
+  color: var(--text-primary);
+}
+.article-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 28px 0 12px;
+  color: var(--primary);
+}
+.article-body p {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+.article-body ul,
+.article-body ol {
+  color: var(--text-secondary);
+  line-height: 1.85;
+  margin-bottom: 20px;
+  padding-left: 24px;
+  font-size: 16px;
+}
+.article-body li {
+  margin-bottom: 8px;
+}
+
+/* ---------- Hero image ---------- */
+.article-img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 32px 0;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;   /* Prevents CLS — Google Discover requirement */
+  display: block;
+  /* Placeholder while image loads */
+  background: linear-gradient(135deg, rgba(0,201,167,0.1), rgba(13,27,62,0.3));
+  min-height: 200px;
+}
+
+/* ---------- Vet badge ---------- */
+.vet-badge {
+  background: rgba(0,201,167,0.08);
+  border: 1px solid rgba(0,201,167,0.25);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 24px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.vet-badge .icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.vet-badge p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.vet-badge strong {
+  color: var(--primary);
+}
+
+/* ---------- Callout boxes ---------- */
+.callout {
+  background: rgba(255,107,107,0.08);
+  border-left: 4px solid #FF6B6B;
+  border-radius: 0 12px 12px 0;
+  padding: 14px 18px;
+  margin: 20px 0;
+}
+.callout.green {
+  background: rgba(0,201,167,0.08);
+  border-left-color: var(--primary);
+}
+.callout p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.callout strong {
+  color: var(--text-primary);
+}
+
+/* ---------- Data table — scrollable on mobile ---------- */
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  border-radius: 12px;
+}
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px; /* force scroll before squishing */
+}
+.data-table th {
+  background: var(--bg-surface);
+  color: var(--primary);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.data-table td {
+  padding: 12px 16px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+.data-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* ---------- Author box ---------- */
+.author-box {
+  background: var(--bg-surface);
+  border-radius: 16px;
+  padding: 24px;
+  margin: 48px 0 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.author-box img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: rgba(0,201,167,0.1);
+}
+.author-box h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.author-box .credentials {
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.author-box p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ---------- Disclaimer ---------- */
+.disclaimer {
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 24px 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---------- Related articles ---------- */
+.related-articles {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 36px;
+  margin-top: 36px;
+}
+.related-articles h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.related-card {
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: 18px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  display: block;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+.related-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0,201,167,0.2);
+}
+.related-card h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+.related-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   TRUST ELEMENTS (Day 1 SEO & E-E-A-T upgrades)
+   ============================================================ */
+
+/* Last-updated badge */
+.last-updated-badge {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Medical disclaimer box (red-tinted) */
+.medical-disclaimer-box {
+  background: rgba(255,107,107,0.08);
+  border-left: 4px solid #FF6B6B;
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+.medical-disclaimer-box p {
+  margin: 0;
+  font-size: 14px;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Talk-to-a-vet CTA box */
+.vet-cta-box {
+  background: rgba(0,201,167,0.08);
+  border: 1px solid rgba(0,201,167,0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  text-align: center;
+}
+.vet-cta-box p { margin: 0 0 12px 0; }
+.vet-cta-box .vet-cta-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+.vet-cta-box .vet-cta-sub {
+  font-size: 14px;
+  color: #94a3b8;
+}
+.vet-cta-box .vet-cta-btn {
+  display: inline-block;
+  background: #00C9A7;
+  color: #0a1628;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  transition: opacity 0.2s;
+}
+.vet-cta-box .vet-cta-btn:hover { opacity: 0.88; }
+.vet-cta-box .vet-cta-note {
+  font-size: 12px;
+  color: #64748b;
+  margin: 12px 0 0 0;
+}
+
+/* FAQ section */
+.faq-section { margin: 40px 0; }
+.faq-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+.faq-item {
+  background: var(--bg-surface);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.faq-item h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-primary) !important;
+}
+.faq-item p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ============================================================
+   BLOG IMAGE WRAPPER — Google Discover Mobile Compliance
+   Wraps article images for proper aspect ratio + captions
+   ============================================================ */
+.blog-image-wrapper {
+  margin: 28px 0;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--bg-surface);
+}
+.blog-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3;   /* 4:3 optimal for mobile reading screens */
+  object-fit: cover;
+}
+/* Generated articles & category pages use 16:9 hero images */
+.light-layout .blog-image-wrapper img {
+  aspect-ratio: 16 / 9;
+}
+.image-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 10px 16px;
+  margin: 0;
+  font-style: italic;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ============================================================
+   DYNAMIC AFFILIATE LINK TARGETS
+   IDs used by localization JS when real affiliate links arrive
+   ============================================================ */
+#dynamic-insurance-link,
+#dynamic-telehealth-link {
+  /* Inherits .vet-cta-btn styles — IDs are hooks for JS localization */
+  transition: opacity 0.2s, transform 0.15s;
+}
+#dynamic-insurance-link:hover,
+#dynamic-telehealth-link:hover {
+  transform: translateY(-1px);
+}
+
+/* ============================================================
+   MOBILE BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 768px) {
+  .article-hero {
+    padding: 40px 0 28px;
+  }
+  .article-hero h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  .article-hero .lead {
+    font-size: 16px;
+  }
+  .article-body {
+    padding: 32px 16px 48px;
+  }
+  .article-body h2 {
+    font-size: 22px;
+    margin: 32px 0 14px;
+  }
+  .article-body h3 {
+    font-size: 18px;
+  }
+  .article-body p,
+  .article-body ul,
+  .article-body ol {
+    font-size: 15px;
+  }
+  .article-img {
+    border-radius: 12px;
+    margin: 24px 0;
+    max-height: 280px;
+    min-height: 160px;
+  }
+  .author-box {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+  .author-box img {
+    width: 60px;
+    height: 60px;
+  }
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+  .vet-badge {
+    padding: 12px 14px;
+  }
+  .callout {
+    padding: 12px 14px;
+  }
+  .data-table th,
+  .data-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-hero h1 {
+    font-size: 22px;
+  }
+  .article-meta {
+    gap: 8px;
+  }
+  .article-body {
+    padding: 24px 14px 40px;
+  }
+}
